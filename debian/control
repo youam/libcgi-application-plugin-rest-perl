@@ -1,0 +1,33 @@
+Source: libcgi-application-plugin-rest-perl
+Section: perl
+Priority: optional
+Maintainer: Uli Martens <uli@youam.net>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: perl
+Standards-Version: 3.9.6
+Homepage: https://metacpan.org/release/CGI-Application-Plugin-REST
+
+Package: libcgi-application-plugin-rest-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}
+Description: Helps implement RESTful architecture in CGI applications
+ REST stands for REpresentational State Transfer. It is an architecture for
+ web applications that tries to leverage the existing infrastructure of the
+ World Wide Web such as URIs, MIME media types, and HTTP instead of building
+ up protocols and functions on top of them.
+ .
+ This plugin contains a number of functions to support the various REST
+ concepts. They try to use existing CGI::Application|CGI::Application
+ functionality wherever possible.
+ .
+ use'ing this plugin will intercept CGI::Application|CGI::Application's
+ standard dispatch mechanism. Instead of being selected based on a query
+ parameter like rm, the run mode will be determined by comparing URI patterns
+ defined in your app with the rest_route|rest_route() method. (Referred from
+ here on, as "routes".) Optionally, specific HTTP methods or MIME media types
+ can be defined in a route too. One by one, each entry in the reverse
+ asciibetically sorted table of defined routes is compared to the incoming
+ HTTP request and the first successful match is selected. The run mode mapped
+ to that route is then called.
+ .
+ This description was automagically extracted from the module by dh-make-perl.
