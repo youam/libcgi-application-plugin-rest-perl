@@ -2,14 +2,14 @@ Source: libcgi-application-plugin-rest-perl
 Section: perl
 Priority: optional
 Maintainer: Uli Martens <uli@youam.net>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), librest-utils-perl, libtest-www-mechanize-cgiapp-perl, libcgi-application-plugin-devpopup-perl
 Build-Depends-Indep: perl
 Standards-Version: 3.9.6
 Homepage: https://metacpan.org/release/CGI-Application-Plugin-REST
 
 Package: libcgi-application-plugin-rest-perl
 Architecture: all
-Depends: ${misc:Depends}, ${perl:Depends}
+Depends: ${misc:Depends}, ${perl:Depends}, librest-utils-perl, libtest-www-mechanize-cgiapp-perl, libcgi-application-plugin-devpopup-perl
 Description: Helps implement RESTful architecture in CGI applications
  REST stands for REpresentational State Transfer. It is an architecture for
  web applications that tries to leverage the existing infrastructure of the
